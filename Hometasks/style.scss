@@ -109,3 +109,32 @@ $item_width: 300px;
 .main__goods-item-product_name {
     margin-bottom: 10px;
 }
+
+.header__cart {
+    position: relative;
+}
+
+.header__cart-list {
+    width: 100px;
+    z-index: 2;
+    position: absolute;
+    top: 30px;
+    left: -20px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.header__cart-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.header__goods-item-product_name {
+margin-bottom: 4px;
+}
