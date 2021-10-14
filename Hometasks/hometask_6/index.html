@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>eShop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header class="header">
+            <form action="#" class="header__box" @submit.prevent="filter">
+                <searchform v-model="userSearch" id="search-template"></searchform>
+                <button class="header__search-button" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <div class="header__cart">
+                <button class="header__cart-button" type="button" @click="showCart = !showCart">Корзина</button>
+                <cart :cart-items="cartItems" :img="imgCart" :visibility="showCart" @remove="remove">
+                </cart>
+            </div>
+        </header>
+        <main class="main">
+            <products :products="filtered" :img="imgCatalog" @add-product="addProduct">
+            </products>
+        </main>
+
+
+    </div>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+        integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/CartComp.js"></script>
+    <script src="js/ProdComp.js"></script>
+    <script src="js/search_comp.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
